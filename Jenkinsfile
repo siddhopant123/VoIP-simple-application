@@ -22,8 +22,6 @@ pipeline {
                     -Dsonar.host.url=$SONAR_HOST_URL \
                     -Dsonar.token=$SONAR_AUTH_TOKEN \
                     -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/voip-application
-                    -Dsonar.tests=src/test/java
-                    -Dsonar.sources=src/main/java
                     -Dsonar.java.binaries=target/classes
 
                 '''
