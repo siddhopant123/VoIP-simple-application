@@ -16,8 +16,7 @@
         <!-- Custom repository for zoolu-sound dependency -->
         <repository>
             <id>custom-repo</id>
-            <url>https://github.com/siddhopant123/VoIP-simple-application/pom.xml<!-- Replace with actual URL -->
-        </repository>
+            <url>https://repo.maven.apache.org/maven2</url>        </repository>
     </repositories>
 
     <dependencies>
