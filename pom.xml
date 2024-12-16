@@ -12,6 +12,14 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <!-- Custom repository for zoolu-sound dependency -->
+        <repository>
+            <id>custom-repo</id>
+            <url>https://github.com/siddhopant123/VoIP-simple-application.git<!-- Replace with actual URL -->
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- Existing dependencies -->
         <dependency>
