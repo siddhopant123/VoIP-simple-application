@@ -23,16 +23,17 @@
             <artifactId>pcap4j-packetfactory-static</artifactId>
             <version>[1.0, 2.0)</version>
         </dependency>
-        <!-- JavaFX dependencies -->
+        
+        <!-- JavaFX Dependencies -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>20</version> <!-- Use the appropriate version -->
+            <version>20</version> <!-- Update version as needed -->
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>20</version> <!-- Use the appropriate version -->
+            <version>20</version> <!-- Update version as needed -->
         </dependency>
     </dependencies>
 
@@ -46,7 +47,8 @@
                     <target>11</target>
                 </configuration>
             </plugin>
-            <!-- JavaFX Maven Plugin -->
+
+            <!-- Correct JavaFX Maven Plugin Configuration -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -54,11 +56,27 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>compile</goal>
+                            <!-- Correct goal for JavaFX -->
                             <goal>run</goal>
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Maven Surefire Plugin for running tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <forkCount>0</forkCount>
+                </configuration>
+            </plugin>
+
+            <!-- SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
             </plugin>
         </plugins>
 
@@ -79,5 +97,4 @@
             </resource>
         </resources>
     </build>
-
 </project>
