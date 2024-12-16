@@ -13,6 +13,7 @@
     </properties>
 
     <dependencies>
+        <!-- Existing dependencies -->
         <dependency>
             <groupId>org.pcap4j</groupId>
             <artifactId>pcap4j-core</artifactId>
@@ -23,7 +24,7 @@
             <artifactId>pcap4j-packetfactory-static</artifactId>
             <version>[1.0, 2.0)</version>
         </dependency>
-        
+
         <!-- JavaFX Dependencies -->
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -34,6 +35,13 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>20</version> <!-- Update version as needed -->
+        </dependency>
+
+        <!-- Zoolu Sound Codec Dependency -->
+        <dependency>
+            <groupId>org.zoolu</groupId>
+            <artifactId>zoolu-sound</artifactId>
+            <version>1.0.0</version> <!-- Update version if necessary -->
         </dependency>
     </dependencies>
 
@@ -48,7 +56,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Correct JavaFX Maven Plugin Configuration -->
+            <!-- JavaFX Maven Plugin Configuration -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -56,7 +64,6 @@
                 <executions>
                     <execution>
                         <goals>
-                            <!-- Correct goal for JavaFX -->
                             <goal>run</goal>
                         </goals>
                     </execution>
