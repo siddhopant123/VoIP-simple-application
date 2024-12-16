@@ -21,7 +21,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    /var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarScanner/bin/sonar-scanner \
+                    /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Default_Maven/bin/mvn clean verify sonar:sonar \
                         -Dsonar.projectKey=siddhopant123_VoIP-simple-application_5d31848d-4277-4652-8dc7-52af7283d41d \
                         -Dsonar.sources=src/main/java \
                         -Dsonar.tests=src/test/java \
